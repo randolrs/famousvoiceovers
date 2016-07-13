@@ -19,6 +19,7 @@ gem 'sass-rails', '~> 4.0.3'
 
 gem 'devise'
 
+gem 'paperclip', '~> 4.2'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

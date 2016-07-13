@@ -19,6 +19,13 @@ class CelebsController < ApplicationController
 
   # GET /celebs/1/edit
   def edit
+    
+  end
+
+  def browse
+
+    @celebs = Celeb.all
+
   end
 
   # POST /celebs
@@ -69,6 +76,6 @@ class CelebsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def celeb_params
-      params.require(:celeb).permit(:first_name, :last_name, :full_name, :celeb_category_id)
+      params.require(:celeb).permit(:first_name, :last_name, :full_name, :celeb_category_id, :image)
     end
 end

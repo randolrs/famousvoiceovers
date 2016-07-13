@@ -15,6 +15,7 @@
     <%= f.label :first_name %><br>
     <%= f.text_field :first_name %>
   </div>
+
   <div class="field">
     <%= f.label :last_name %><br>
     <%= f.text_field :last_name %>
@@ -23,6 +24,11 @@
     <%= f.label :full_name %><br>
     <%= f.text_field :full_name %>
   </div>
+
+  <%= f.file_field :image, class: "form-control" %>
+
+  <%= image_tag @celeb.image.url(:medium) %>
+
   <div class="field">
     <%= f.label :celeb_category_id %><br>
     <%= f.number_field :celeb_category_id %>
