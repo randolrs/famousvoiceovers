@@ -1,23 +1,9 @@
-<section class="home-panel">
+<% if user_signed_in? %>
 
-	<div id="main">
+	<%= render 'pages/users/dashboard' %>
 
-		<div class="home-panel-content" id="first">
+<% else %>
 
-			<h2>Celebrity Voiceovers<h2>
+	<%= render 'pages/landing_pages/standard_landing_page' %>
 
-			<a class="cta color">Signup</a>
-
-			<a class="cta clear">I am a Professional</a>
-
-		</div>
-
-	</div>
-
-<section>
-
-<section class="home-panel">
-
-
-
-<section>
+<% end %>
