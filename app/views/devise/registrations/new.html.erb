@@ -1,18 +1,27 @@
-<h2>Sign up</h2>
+<div class="background-texture">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+	<div class="background-transparency">
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+		<div class="user-credential-container">
 
-  <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+			<h2>Sign up</h2>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+			<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+				<%= devise_error_messages! %>
 
-<%= render "devise/shared/links" %>
+				<%= f.email_field :email,  placeholder: "Email", autofocus: true %>
+
+				<%= f.password_field :password,  placeholder: "Password", autocomplete: "off" %>
+
+				<%= f.submit "Sign up", class:"user-credential-submit" %>
+
+			<% end %>
+
+			<%= render "devise/shared/links" %>
+
+		</div>
+
+	</div>
+
+</div>
