@@ -33,10 +33,18 @@ html, body{
 }
 
 body{
-	
+
 	background-color:#f6f6f6;
   
   /*background-image: url("https://s3.amazonaws.com/futable/backgrounds/handmadepaper.png");
   background-image: url("/assets/handmadepaper.png");*/
 
+}
+
+.content{
+	padding-top: 50px;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
 }
