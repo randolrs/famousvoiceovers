@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get 'celebrities' => "celebs#browse"
 
+  get 'projects/submit' => "gigs#submit", as: 'project_submit'
+
 
   devise_for :users
 

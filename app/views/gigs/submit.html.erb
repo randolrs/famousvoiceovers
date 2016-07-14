@@ -1,0 +1,37 @@
+<div class="content">
+
+	<h2 class="content-header">Get a Voice Recording</h2>
+
+	<%= form_for(@gig) do |f| %>
+
+		<div class="project-submit-form-container" id="celebrity-select">
+
+			<h3>First, tell us which celebrity the voiceover should sound like:</h3>
+
+			<%= collection_select(:gig, :celeb_id, Celeb.all, :id, :full_name) %>
+
+			<a>Next</a>
+
+		</div>
+
+		<div class="project-submit-form-container" id="audition-option">
+
+			<h3>Next, tell us what you would like to do:</h3>
+
+			<a>Get 3 Auditions and Choose a Winner.</a>
+
+			<a>Let Us Pick the Best Voiceover Professional for You</a>
+
+		</div>
+
+		<div class="project-submit-form-container" id="script-input">
+
+			<h3>Finally, enter your script below:</h3>
+
+			<%= f.text_area :script %>
+
+		</div>
+
+	<% end %>
+
+</div>

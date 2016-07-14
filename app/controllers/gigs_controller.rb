@@ -17,6 +17,10 @@ class GigsController < ApplicationController
     @gig = Gig.new
   end
 
+  def submit
+    @gig = Gig.new
+  end
+
   # GET /gigs/1/edit
   def edit
   end
