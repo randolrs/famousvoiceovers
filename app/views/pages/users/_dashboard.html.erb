@@ -16,13 +16,6 @@
 
 		<div class="project-dashboard">
 
-			<ul>
-
-				<li>Recent</li>
-				<li>Status</li>
-
-			</ul>
-
 			<% current_user.gigs.each do |project| %>
 
 				<div class="project-summary-index" id="<%= project.id%>">

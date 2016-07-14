@@ -31,5 +31,11 @@ ready = ->
 				thisPanel.slideUp()
 				auditionOptionPanel.slideDown()
 
+			$("div.project-summary-index").click (event), ->
+				projectID = $(@).attr('id')
+				alert(projectID)
+				redirect = "/gigs/" + q(projectID)
+				window.location.replace("/weird");
+
 $(document).ready(ready)
 $(document).on('page:load', ready)

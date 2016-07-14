@@ -62,6 +62,7 @@ section.home-panel{
     	border-radius: 2px;
     	box-shadow: 0px 2px 3px #ccc;
     	padding: 10px 8px;
+    	margin-bottom: 20px;
 
     	.project-summary-index-header{
 
@@ -71,8 +72,10 @@ section.home-panel{
 
 	.project-summary-index:hover{
 
-		cursor: pointer;
-		background: #ddd;
+		background: rgba(200, 200, 255, 0.5);
+    	cursor: pointer;
+    	border: 1px solid #ff9696;
+    	box-shadow: none;
 
 	}
 }
