@@ -1,32 +1,29 @@
 <div class="header-container">
 
-	<ul class="header-left">
+	<div class="header-center">
 
-		<li><%= link_to "Home", root_path %></li>
-		<li><%= link_to "Celebs", celebrities_path %></li>
-		<li><a>Find</a></li>
+		<ul class="header-left">
 
-	</ul>
+			<li><%= link_to "Home", root_path %></li>
+			<li><%= link_to "Celebs", celebrities_path %></li>
 
-	<ul class="header-right">
+		</ul>
 
-		<% unless user_signed_in? %>
+		<ul class="header-right">
 
-			<li><%= link_to "Signup", new_user_registration_path %></li>
-			<li><%= link_to "Login", new_user_session_path %></li>
-			
-		<%else%>
+			<% unless user_signed_in? %>
 
-			<% if current_user.admin %>
+				<li><%= link_to "Signup", new_user_registration_path %></li>
+				<li><%= link_to "Login", new_user_session_path %></li>
+				
+			<%else%>
 
-				<li><%= link_to "Celebs", celebs_path %></li>
+				<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
 
 			<%end%>
 
-			<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+		</ul>
 
-		<%end%>
-
-	</ul>
-
+	</div>
+	
 </div>
