@@ -7,14 +7,17 @@
 		<% @celebs.each do |celeb| %>
 
 			<li>
+				<%= link_to(root_path, class: "link-wrapper")  do %>
+				
+					<div class="celeb-summary-panel">
 
-				<div class="celeb-summary-panel">
+						<%= image_tag celeb.image.url(:medium) %>
 
-					<%= image_tag celeb.image.url(:medium) %>
+						<h3><%= celeb.full_name %></h3>
 
-					<h3><%= celeb.full_name %></h3>
+					</div>
 
-				</div>
+				<% end %>
 
 			</li>
 
