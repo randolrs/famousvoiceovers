@@ -17,17 +17,21 @@
 
 		<div class="content-container">
 
-			<%if user_signed_in? %>
+			<div class="header-offset">
 
-				<%= render 'layouts/dashboard_header' %>
+				<%if user_signed_in? %>
 
-			<%end%>
+					<%= render 'layouts/dashboard_header' %>
 
-			<% flash.each do |name, msg| %>
-	     		<%= content_tag(:div, msg, class: "alert alert-#{name}") %>
-			<% end %>
+				<%end%>
 
-			<%= yield %>
+				<% flash.each do |name, msg| %>
+		     		<%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+				<% end %>
+
+				<%= yield %>
+			
+			</div>
 
 		</div>
 

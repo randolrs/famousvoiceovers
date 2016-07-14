@@ -42,11 +42,16 @@ body{
 }
 
 .content-container{
-	padding-top: 70px;
 	height: auto;
 	width:100%;
 	min-height: 100%;
 	max-width:100%;
+
+}
+
+.header-offset{
+	padding-top: 70px;
+
 
 }
 
