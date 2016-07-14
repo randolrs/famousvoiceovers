@@ -12,5 +12,24 @@ ready = ->
 				coverPage = $(@).parent().parent()
 				coverPage.hide()
 
+			$("a#next-to-audition-option").click (event), ->
+				thisPanel = $(@).parent()
+				auditionOptionPanel = $('body').find('div#audition-option')
+				thisPanel.slideUp()
+				auditionOptionPanel.slideDown()
+
+			$("a.select-option").click (event), ->
+				thisPanel = $(@).parent()
+				scriptInputPanel = $('body').find('div#script-input')
+				thisPanel.slideUp()
+				scriptInputPanel.slideDown()
+
+			$("a#next-to-payment").click (event), ->
+				thisPanel = $(@).parent()
+				alert("profits")
+				auditionOptionPanel = $('body').find('div#audition-option')
+				thisPanel.slideUp()
+				auditionOptionPanel.slideDown()
+
 $(document).ready(ready)
 $(document).on('page:load', ready)

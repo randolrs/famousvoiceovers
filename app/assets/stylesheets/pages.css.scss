@@ -49,11 +49,38 @@ section.home-panel{
 
 }
 
+.project-dashboard{
+	max-width:600px;
+	padding:0px 10px;
+	width:auto;
+	margin: 0 auto;
+
+	.project-summary-index{
+
+		background: #fff;	
+		border: 1px solid #ccc;
+    	border-radius: 2px;
+    	box-shadow: 0px 2px 3px #ccc;
+    	padding: 10px 8px;
+
+    	.project-summary-index-header{
+
+    	}
+
+	}
+
+	.project-summary-index:hover{
+
+		cursor: pointer;
+		background: #ddd;
+
+	}
+}
+
 .project-dashboard.none{
 	width:auto;
 	padding: 20px;
 	border: 3px dashed #bbb;
-	margin: 0px 25px;
 	text-align: center;
 
 	a {

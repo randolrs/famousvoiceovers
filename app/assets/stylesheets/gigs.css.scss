@@ -20,6 +20,68 @@
 		color: #666;
 
 	}
+
+	a.project-submit-next, input.project-submit-next{
+		
+		background: rgba(0, 200, 0, 0.9);
+	    border: 1px solid rgba(0, 150, 0, 0.9);
+	    color: #fff;
+	    font-size: 24px;
+	    text-shadow: 0px 1px 0px #666;
+	    padding: 20px;
+	    display: block;
+	    margin: 0 auto;
+	    margin-top: 40px;
+	    box-shadow: inset 0px 1px 3px 0px #fff;
+	    border-radius: 3px;
+
+	}
+
+	a.project-submit-next:hover, input.project-submit-next:hover{
+		cursor: pointer;
+
+	}
+	
+	a.project-submit-next{
+		width: 200px;
+	}
+
+	.input.project-submit-next{
+		width: 300px;
+	}
+
+	textarea{
+		width: 400px;
+		height: 200px;
+		resize: none;
+	}
+
+	.select-option{
+		display:block;
+		width:300px;
+		margin: 0 auto;
+		color: #fff;
+		padding: 20px;
+		box-shadow: inset 0px 1px 3px 0px #fff;
+		font-size: 20px;
+		text-shadow: 0px 1px 0px #333;
+	}
+
+	.select-option#red{
+
+		background: rgba(200,0,0,1);
+		border: 1px solid rgba(150,0,0,1);
+	}
+
+	.select-option#blue{
+
+		background: rgba(0,0,200,1);
+		border: 1px solid rgba(0,0,150,1);
+	}
+
+	.select-option:hover{
+		cursor: pointer;
+	}
 	
 }
 

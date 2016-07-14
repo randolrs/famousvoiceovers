@@ -30,6 +30,8 @@ class GigsController < ApplicationController
   def create
     @gig = Gig.new(gig_params)
 
+    @gig.update(:user_id => current_user.id)
+
     respond_to do |format|
       if @gig.save
         format.html { redirect_to @gig, notice: 'Gig was successfully created.' }
@@ -73,6 +75,6 @@ class GigsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gig_params
-      params.require(:gig).permit(:title, :description, :script, :price_gig, :price_audition)
+      params.require(:gig).permit(:title, :description, :script, :price_gig, :price_audition, :celeb_id, :user_id)
     end
 end
