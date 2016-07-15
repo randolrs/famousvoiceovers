@@ -61,7 +61,7 @@ section.home-panel{
 		border: 1px solid #ccc;
     	border-radius: 2px;
     	box-shadow: 0px 2px 3px #ccc;
-    	margin-top: 30px;
+    	margin-top: 40px;
 
     	.project-summary-index-header{
     		padding: 10px;
@@ -71,11 +71,40 @@ section.home-panel{
 		    color: #333;
 		    font-weight: 500;
 		    text-shadow: 0px 1px 0px #ddd;
+		    text-align: center;
 
     	}
 
     	.project-summary-index-info{
+
+    		background: #666;
+    		color: #fff;
+    		font-size: 18px;
+
+
+    		.header-date{
+    			display: inline-block;
+    			padding: 10px;
+    		}
+
+    		span.summary-index-price{
+				color: #fff;
+			    float: right;
+			    background: rgba(100, 200, 100, 0.9);
+			    padding: 10px 20px;
+			}
+    		
+
+    	}
+
+    	.project-summary-index-status{
     		padding: 10px;
+    		text-align:center;
+    		background: rgba(100,100,180,.9);
+    		text-shadow: 0px 1px 0px #666;
+    		color: #fff;
+    		font-size: 18px;
+    		font-weight: 500;
 
     	}
 
@@ -100,7 +129,7 @@ section.home-panel{
 		padding: 20px;
 		font-size:20px;
 		display: block;
-		width:225px;
+		width: 250px;
 		border-radius: 50px;
 
 		margin: 0 auto;

@@ -1,0 +1,29 @@
+<h1>Listing auditions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Gig</th>
+      <th>User</th>
+      <th>Comments</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @auditions.each do |audition| %>
+      <tr>
+        <td><%= audition.gig_id %></td>
+        <td><%= audition.user_id %></td>
+        <td><%= audition.comments %></td>
+        <td><%= link_to 'Show', audition %></td>
+        <td><%= link_to 'Edit', edit_audition_path(audition) %></td>
+        <td><%= link_to 'Destroy', audition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Audition', new_audition_path %>

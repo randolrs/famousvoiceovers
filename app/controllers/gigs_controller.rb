@@ -7,6 +7,12 @@ class GigsController < ApplicationController
     @gigs = Gig.all
   end
 
+  def index_for_auditions
+
+    @gigs = Gig.all
+
+  end
+
   # GET /gigs/1
   # GET /gigs/1.json
   def show

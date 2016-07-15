@@ -1,10 +1,23 @@
 <div class="content">
 
+
   <h2 class="content-header">Voiceover that Sounds like <%= image_tag @gig.celeb.image.url(:medium), :class => "celeb-img-small" %> <%= @gig.celeb.full_name %><span class="price">$300</span></h2>
 
   <h3 class="content-sub-header">Submitted <%= @gig.created_at.strftime("%b %d, %Y") %></h3>
 
-  <h3 class="content-sub-header">Status: <span class="status-name"><%= @gig.status %></span></h3>
+  <% if current_user.is_my_gig(@gig.id) %>
+
+    <h3 class="content-sub-header">Status: <span class="status-name"><%= @gig.status %></span></h3>
+
+  <%end%>
+
+
+  <div class ="audition-submit-container">
+
+    <p class="submit-voiceover">Submit Your Audition</p>
+
+  </div>
+
 
   <div class="content-section">
   
@@ -15,3 +28,7 @@
   </div>
 
 </div>
+
+<%= render partial: 'auditions/attach_audition_form', locals: {gig_id: @gig.id} %>
+
+

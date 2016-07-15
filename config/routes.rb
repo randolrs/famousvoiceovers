@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :auditions
+
   resources :voice_over_types
 
   resources :gigs
@@ -15,6 +17,8 @@ Rails.application.routes.draw do
   get 'celebrities' => "celebs#browse"
 
   get 'projects/submit' => "gigs#submit", as: 'project_submit'
+
+  get 'projects/audition' => "gigs#index_for_auditions", as: 'gig_index_for_auditions'
 
 
   devise_for :users

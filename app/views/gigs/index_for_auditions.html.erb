@@ -1,0 +1,17 @@
+<div class="content">
+
+	<h2 class="content-header">Projects You Can Audition</h2>
+
+	<div class="project-dashboard">
+
+		<% @gigs.each do |project| %>
+
+			<%= render partial: 'gigs/summary_index', locals: {project: project} %>
+			<%# render 'gigs/summary_index' %>
+
+		<% end %>
+
+	</div>
+
+</div>
+

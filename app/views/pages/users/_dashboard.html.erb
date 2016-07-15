@@ -2,40 +2,45 @@
 
 	<h2 class="content-header">Your Voiceover Projects</h2>
 
-	<% if current_user.gigs.count == 0 %>
+	<% unless current_user.is_voiceover_professional %>
 
-		<div class="project-dashboard none">
+		<% if current_user.gigs.count == 0 %>
 
-			<%= link_to "+ Submit a New Project", project_submit_path%>
+			<div class="project-dashboard none">
 
-		</div>
+				<%= link_to "+ Submit a New Project", project_submit_path%>
 
-
-	<% else%>
-
-
-		<div class="project-dashboard">
-
-			<% current_user.gigs.each do |project| %>
-
-				<div class="project-summary-index" id="<%= project.id%>">
-
-					<div class="project-summary-index-header">
-						<a><span>Commercial voiceover that sounds like</span> <%= image_tag project.celeb.image.url(:medium), :class => "celeb-img-small" %> <span><%= project.celeb.full_name %></span></a>
-					</div>
-
-					<div class="project-summary-index-info">
-						<a>Price: $399</a><br>
-						<a>Submitted: <%= project.created_at.strftime("%b %d, %Y") %></a><br>
-						<a>Status: <%= project.status %></a>
-					</div>
-
-				</div>
-
-			<% end %>
+			</div>
 
 
-		</div>
+		<% else%>
+
+
+			<div class="project-dashboard">
+
+				<% current_user.gigs.each do |project| %>
+
+					<%= render 'gigs/summary_index' %>
+
+				<% end %>
+
+
+			</div>
+
+
+		<%end%>
+
+	<%else%>
+
+		<% if current_user.auditions.count == 0 %>
+
+			<div class="project-dashboard none">
+
+				<%= link_to "Audition for New Projects", gig_index_for_auditions_path %>
+
+			</div>
+
+		<%end%>
 
 
 	<%end%>

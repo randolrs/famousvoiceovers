@@ -5,7 +5,24 @@
 		<ul class="header-left">
 
 			<li><%= link_to "Home", root_path %></li>
-			<li><%= link_to "Find Celebrity Voices", celebrities_path %></li>
+
+			<% if user_signed_in? %>
+
+				<% if current_user.is_voiceover_professional %>
+
+					<li><%= link_to "Verify Me", celebrities_path %></li>
+
+				<% else %>
+
+					<li><%= link_to "Find Celebrity Voices", celebrities_path %></li>
+
+				<% end %>
+
+			<%else%>
+
+				<li><%= link_to "Find Celebrity Voices", celebrities_path %></li>
+
+			<%end%>
 
 		</ul>
 

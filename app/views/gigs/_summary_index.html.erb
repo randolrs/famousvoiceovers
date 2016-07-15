@@ -1,0 +1,22 @@
+<div class="project-summary-index" id="<%= project.id%>">
+
+  <div class="project-summary-index-info">
+    
+    <a class="header-date"><%= project.created_at.strftime("%b %d, %Y") %></a>
+    <span class="summary-index-price"><a>$399</a></span>
+    
+  </div>
+
+  <div class="project-summary-index-header">
+    <a><span>Voiceover that Sounds like</span> <%= image_tag project.celeb.image.url(:medium), :class => "celeb-img-small" %> <span><%= project.celeb.full_name %></span></a>
+  </div>
+
+  <% if current_user.is_my_gig(project.id) %>
+    
+    <div class="project-summary-index-status">
+      <a>Status: <%= project.status %></a>
+    </div>
+    
+  <%end%>
+
+</div>

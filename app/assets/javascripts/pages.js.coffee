@@ -36,5 +36,18 @@ ready = ->
 				redirect = "/gigs/" + "#{projectID}"
 				window.location.replace(redirect);
 
+			$(".submit-voiceover").click (event), ->
+				$('body').find("#audition-attach-form").show()
+
+			$(".modal-container").click (event), ->
+				$(@).hide()
+
+			$(".modal-content").click (event), ->
+				event.stopPropagation()
+
+			$("span.dismiss-modal").click (event), ->
+				modal = $('body').find(".modal-container")
+				modal.hide()
+
 $(document).ready(ready)
 $(document).on('page:load', ready)

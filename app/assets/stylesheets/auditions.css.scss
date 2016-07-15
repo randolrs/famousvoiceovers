@@ -1,0 +1,32 @@
+// Place all the styles related to the auditions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.audition-submit-container{
+	text-align:center;
+}
+
+
+p.submit-voiceover{
+	display: inline-block;
+	padding:10px 25px;
+	margin: 0 auto;
+	border-radius: 30px;
+	font-size: 30px;
+
+	color: #fff;
+    text-shadow: 0px 1px 2px #222;
+    background-color: #FF9A13;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9a13), to(#de8611));
+    background-image: -webkit-linear-gradient(top, #ff9a13, #de8611);
+    background-image: -moz-linear-gradient(top, #ff9a13, #de8611);
+    background-image: -ms-linear-gradient(top, #ff9a13, #de8611);
+    background-image: -o-linear-gradient(top, #ff9a13, #de8611);
+    background-image: linear-gradient(top, #ff9a13, #de8611);
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: inset 0px 1px 3px 0px #fff;
+}
+
+p.submit-voiceover:hover{
+	cursor: pointer;
+}
