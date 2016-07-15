@@ -4,17 +4,17 @@
 
 		<ul class="header-left">
 
-			<li><%= link_to "Your Projects", root_path %></li>
+			<li><%= link_to "Your Auditions", root_path %></li>
 
 			<% if current_user.is_voiceover_professional? %>
 
 				<li><%= link_to "Audition for Projects", gig_index_for_auditions_path %></li>
+				<li><%= link_to "Balance: $24.00", root_path %></li>
 
 			<%else%>
 				
 				<li><%= link_to "Favorite Actors", root_path %></li>
 				<li><%= link_to "Submit a New Project", project_submit_path %></li>
-				<li><%= link_to "Balance: $24.00", root_path %></li>
 
 			<%end%>
 
