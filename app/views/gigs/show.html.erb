@@ -1,29 +1,43 @@
-<p id="notice"><%= notice %></p>
+<div class="content">
 
-<p>
-  <strong>Title:</strong>
-  <%= @gig.title %>
-</p>
+  <h2 class="content-header">Commercial Voiceover that Sounds like <%= image_tag @gig.celeb.image.url(:medium), :class => "celeb-img-small" %> <%= @gig.celeb.full_name %></h2>
 
-<p>
-  <strong>Description:</strong>
-  <%= @gig.description %>
-</p>
+  <h3 class="content-sub-header">Submitted <%= @gig.created_at.strftime("%b %d, %Y") %></h3>
 
-<p>
-  <strong>Script:</strong>
-  <%= @gig.script %>
-</p>
+  <div class="content-section">
+  
 
-<p>
-  <strong>Price gig:</strong>
-  <%= @gig.price_gig %>
-</p>
 
-<p>
-  <strong>Price audition:</strong>
-  <%= @gig.price_audition %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_gig_path(@gig) %> |
-<%= link_to 'Back', gigs_path %>
+    <p>
+      <strong>Title:</strong>
+      <%= @gig.title %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%= @gig.description %>
+    </p>
+
+    <p>
+      <strong>Script:</strong>
+      <%= @gig.script %>
+    </p>
+
+    <p>
+      <strong>Price gig:</strong>
+      <%= @gig.price_gig %>
+    </p>
+
+    <p>
+      <strong>Price audition:</strong>
+      <%= @gig.price_audition %>
+    </p>
+
+    <%= link_to 'Edit', edit_gig_path(@gig) %> |
+    <%= link_to 'Back', gigs_path %>
+
+  </div>
+
+</div>

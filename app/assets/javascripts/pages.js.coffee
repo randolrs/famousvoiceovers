@@ -33,9 +33,8 @@ ready = ->
 
 			$("div.project-summary-index").click (event), ->
 				projectID = $(@).attr('id')
-				alert(projectID)
-				redirect = "/gigs/" + q(projectID)
-				window.location.replace("/weird");
+				redirect = "/gigs/" + "#{projectID}"
+				window.location.replace(redirect);
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
