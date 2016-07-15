@@ -24,11 +24,9 @@
 						<a><span>Commercial voiceover that sounds like</span> <%= image_tag project.celeb.image.url(:medium), :class => "celeb-img-small" %> <span><%= project.celeb.full_name %></span></a>
 					</div>
 
-					<div class="project-summary-index-date">
-						<a>Submitted: <%= project.created_at.strftime("%b %d, %Y") %></a>
-					</div>
-
-					<div class="project-summary-index-status">
+					<div class="project-summary-index-info">
+						<a>Price: $399</a><br>
+						<a>Submitted: <%= project.created_at.strftime("%b %d, %Y") %></a><br>
 						<a>Status: <%= project.status %></a>
 					</div>
 

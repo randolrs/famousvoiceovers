@@ -61,20 +61,19 @@ section.home-panel{
 		border: 1px solid #ccc;
     	border-radius: 2px;
     	box-shadow: 0px 2px 3px #ccc;
-    	margin-bottom: 20px;
+    	margin-top: 30px;
 
     	.project-summary-index-header{
     		padding: 10px;
-    		background: rgba(200,200,255,1);
+		    background: rgba(255,200,100,1);
+		    border-bottom: 1px solid #ccc;
+		    font-size: 20px;
+		    color: #333;
+		    font-weight: 500;
 
     	}
 
-    	.project-summary-index-date{
-    		padding: 10px;
-
-    	}
-
-    	.project-summary-index-status{
+    	.project-summary-index-info{
     		padding: 10px;
 
     	}
@@ -83,7 +82,6 @@ section.home-panel{
 
 	.project-summary-index:hover{
 
-		background: rgba(200, 200, 255, 0.5);
     	cursor: pointer;
     	border: 1px solid #ff9696;
     	box-shadow: none;
