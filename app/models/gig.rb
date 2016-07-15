@@ -14,4 +14,11 @@ class Gig < ActiveRecord::Base
 
 	end
 
+	def status 
+
+		return "Awaiting Auditions"
+
+
+	end
+
 end

@@ -61,10 +61,21 @@ section.home-panel{
 		border: 1px solid #ccc;
     	border-radius: 2px;
     	box-shadow: 0px 2px 3px #ccc;
-    	padding: 10px 8px;
     	margin-bottom: 20px;
 
     	.project-summary-index-header{
+    		padding: 10px;
+    		background: rgba(200,200,255,1);
+
+    	}
+
+    	.project-summary-index-date{
+    		padding: 10px;
+
+    	}
+
+    	.project-summary-index-status{
+    		padding: 10px;
 
     	}
 

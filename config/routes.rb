@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :voice_over_types
+
   resources :gigs
 
   resources :celebs

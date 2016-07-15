@@ -20,22 +20,16 @@
 
 				<div class="project-summary-index" id="<%= project.id%>">
 
-					<%= project.created_at %>
-
-					<div class="project-summary-index-title">
+					<div class="project-summary-index-header">
 						<a><span>Commercial voiceover that sounds like</span> <%= image_tag project.celeb.image.url(:medium), :class => "celeb-img-small" %> <span><%= project.celeb.full_name %></span></a>
 					</div>
 
-					<div class="project-summary-index-auditions">
-						<a>Auditions: 2</a>
-					</div>
-
-					<div class="project-summary-index-script">
-						<a>Script</a>
+					<div class="project-summary-index-date">
+						<a>Submitted: <%= project.created_at.strftime("%b %d, %Y") %></a>
 					</div>
 
 					<div class="project-summary-index-status">
-						<a>Status:</a>
+						<a>Status: <%= project.status %></a>
 					</div>
 
 				</div>

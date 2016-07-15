@@ -1,0 +1,21 @@
+<%= form_for(@voice_over_type) do |f| %>
+  <% if @voice_over_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@voice_over_type.errors.count, "error") %> prohibited this voice_over_type from being saved:</h2>
+
+      <ul>
+      <% @voice_over_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

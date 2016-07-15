@@ -30,7 +30,13 @@
 
 		<div class="project-submit-form-container" id="script-input">
 
-			<h3>Finally, enter your script below:</h3>
+			<h3>Finally, enter your full script below:</h3>
+
+    		<%# collection_select(:gig, :type, VoiceOverType.all, :name, :name) %>
+
+<!--     		<br>
+
+    		<h4>Script:</h4> -->
 
 			<%= f.text_area :script %>
 

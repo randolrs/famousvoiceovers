@@ -10,7 +10,8 @@
     position: fixed;
 
     a{
-    	color: #666;
+    	color: #333;
+    	text-shadow: 0px 1px 0px #eee;
     	padding: 25px 25px;
     	line-height: 20px;
     	font-size: 16px;
@@ -23,6 +24,7 @@
     
     a{
     	color: #fff;
+    	text-shadow: 0px 1px 0px #444;
     	padding: 15px 25px;
     	line-height: 16px;
 		font-size: 16px;
@@ -30,6 +32,7 @@
 
     a:hover{
     	background: #4d90fe;
+    	text-shadow: none;
     }
 }
 
